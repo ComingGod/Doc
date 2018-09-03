@@ -1,0 +1,1 @@
+./elftosb.exe -V -f imx -c ../../bd_file/imx10xx/imx-semcnor-xip-encrypted.bd -o ../../../example_images/ivt_application_semcnor_xip_encrypted.bin ../../../example_images/led_demo_semc_nor.elf

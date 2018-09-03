@@ -1,0 +1,1 @@
+./elftosb.exe -V -f imx -c ../../bd_file/imx10xx/imx-itcm-encrypted.bd -o ../../../example_images/ivt_application_nand_itcm_encrypted_fpga.bin ../../../example_images/led_demo_itcm_fpga.elf

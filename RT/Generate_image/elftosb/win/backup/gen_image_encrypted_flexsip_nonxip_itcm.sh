@@ -1,0 +1,1 @@
+./elftosb.exe -V -f imx -c ../../bd_file/imx10xx/imx-itcm-encrypted-nonxip.bd -o ../../../example_images/ivt_application_nand_itcm_encrypted_nonxip.bin ../../../example_images/led_demo_evb_itcm.elf

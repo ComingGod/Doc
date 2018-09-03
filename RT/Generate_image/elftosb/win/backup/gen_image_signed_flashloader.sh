@@ -1,0 +1,1 @@
+./elftosb.exe -V -f imx -c ../../bd_file/imx10xx/imx-dtcm-signed.bd -o ../../../Flashloader/rt1064/ivt_flashloader_signed.bin ../../../Flashloader/rt1064/flashloader.elf

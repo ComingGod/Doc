@@ -1,0 +1,1 @@
+./elftosb.exe -V -f imx -c ../../bd_file/imx10xx/imx-itcm-signed.bd -o ../../../example_images/ivt_application_nand_itcm_signed.bin ../../../example_images/led_demo_evb_itcm.elf

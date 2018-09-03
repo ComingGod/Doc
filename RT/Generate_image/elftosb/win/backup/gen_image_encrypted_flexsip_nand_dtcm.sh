@@ -1,0 +1,1 @@
+./elftosb.exe -V -f imx -c ../../bd_file/imx10xx/imx-dtcm-encrypted.bd -o ../../../example_images/ivt_application_nand_dtcm_encrypted.bin ../../../example_images/led_demo_dtcm.elf

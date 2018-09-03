@@ -1,0 +1,1 @@
+./elftosb.exe -V -f imx -c ../../bd_file/imx10xx/imx-nor-non-xip-encrypted.bd -o ../../../example_images/ivt_application_nor_non_xip_encrypted.bin ../../../example_images/led_demo_non_xip.elf

@@ -1,0 +1,1 @@
+./elftosb.exe -V -f imx -c ../../bd_file/K32H844P/imx-itcm-encrypted.bd -o ../../../apps/ivt_application_itcm_enc.bin ../../../apps/led_demo_evk_ram_0xa000.elf

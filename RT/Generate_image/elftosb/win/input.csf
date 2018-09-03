@@ -1,0 +1,38 @@
+[Header]
+    Version = 4.2
+    Engine = DCP
+    Engine Configuration = 0
+    Certificate Format = x509
+    Signature Format = CMS
+    Hash Algorithm = sha256
+
+[Install SRK]
+    File = "keys/SRK_1_2_3_4_table.bin"
+    Source Index = 0
+
+[Install CSFK]
+    File = "crts/CSF1_1_sha256_2048_65537_v3_usr_crt.pem"
+    Certificate Format = x509
+
+[Authenticate CSF]
+
+[Install Key]
+    File = "crts/IMG1_1_sha256_2048_65537_v3_usr_crt.pem"
+    Verification Index = 0
+    Target Index = 2
+
+[Authenticate Data]
+    Verification Index = 2
+    Engine = DCP
+    Engine Configuration = 0
+    Blocks = 0x70001000 0x1000 0x40 "temp.bin",\
+             0x70002000 0x2000 0x790 "temp.bin"
+
+[Set Engine]
+    Hash Algorithm = sha256
+    Engine = DCP
+    Engine Configuration = 0
+
+[Unlock]
+    Engine = SNVS, OCOTP
+    Features = ZMK WRITE, SRK REVOKE
