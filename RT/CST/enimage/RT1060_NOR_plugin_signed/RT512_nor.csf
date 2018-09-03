@@ -1,0 +1,32 @@
+[Header]
+    Version = 4.2
+    Hash Algorithm = sha256
+    Engine = SW
+    Engine Configuration = 0
+    Certificate Format = X509
+    Signature Format  = CMS
+
+[Install SRK]
+    File = "../../keys/SRK_1_2_3_4_table.bin"
+    Source Index = 0
+
+[Install CSFK]
+    File = "../../crts/CSF1_1_sha256_2048_65537_v3_usr_crt.pem"
+
+[Authenticate CSF]
+	Engine = SW
+	Engine Configuration = 0
+	Signature Format = CMS
+
+[Install Key]
+    File = "../../crts/IMG1_1_sha256_2048_65537_v3_usr_crt.pem"
+    Verification Index = 0
+    Target Index = 2
+    
+[Authenticate Data]
+    Verification Index = 2
+    Engine = SW
+    Engine Configuration = 0
+    Blocks = 0x60001000 0x1000 0x40    "IVT.bin", \
+			 0x60001040 0x1040 0x40      "IVT.bin", \
+			 0x60002000 0x2000 0x7a0     "IVT.bin"

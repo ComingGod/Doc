@@ -1,0 +1,96 @@
+                CST 2.3.1 Release Notes
+
+
+PROJECT(S):             CST
+DATE:                   March 15, 2016
+
+           FREESCALE CONFIDENTIAL PROPRIETARY
+           COPYRIGHT © 2016, FREESCALE
+           ALL RIGHTS RESERVED. PRESENCE OF COPYRIGHT
+           NOTICE IS NOT AN ACKNOWLEDGEMENT OF PUBLICATION.
+
+1 READ ME FIRST
+    This is the Freescale Code Signing Tool (CST) for the High
+    Assurance Boot (HAB) library. The CST provides software code
+    signing support designed for use with Freescale processors that
+    integrate the HAB library in the internal boot ROM. This release
+    provides the features required for the code signing for SoC
+    supporting HAB version 3 and HAB version 4.
+
+1.1 REQUIREMENTS
+    This release supports Linux hosts only.
+    The CST is known to work on Ubuntu 14.04 and later.
+
+    Most Linux releases should work but they have not been fully
+    tested. If you run into library problems, see section 2.1 below
+    for instructions on how to relink CST.
+
+1.2 PROBLEM REPORTING INSTRUCTIONS
+    Problems with this release may be reported to your local Freescale
+    representative or at community.freescale.com.
+
+
+2 NEW FEATURES & Fixes
+    The following is included in this release:
+
+2.1 Encrypted Boot support
+    This version of CST allows the user to relink the executable
+    to include support for generating encrypted boot images.
+
+    To relink on 32 bit machines:
+       cd <CST install directory>/code/back_end/src
+       gcc -o cst -I ../hdr -L ../../../linux32/lib *.c \
+           -lfrontend -lcrypto
+       cp cst ../../../linux32
+
+    To relink on 64 bit machines:
+       cd <CST install directory/code/back_end/src
+       gcc -o cst -I ../hdr -L ../../../linux64/lib *.c -lfrontend -lcrypto
+       cp cst ../../../linux64
+
+    This was added in CST 2.3.0
+
+2.2 64 bit native binaries
+    CST now includes both 32 and 64 bit native binaries. They are
+    located in the linux32 and linux64 directories, respectively.
+
+    This was added in CST 2.3.0
+
+2.3 Issue INIT RNG command
+    On closed i.MX devices with CAAM, HAB will initialize the RNG by
+    default. If the RNG trim fuses have not been set correctly, RNG
+    iniatialization will fail, causing the boot to fail.
+
+    To prevent HAB from initializing the RNG, you can add an UNLOCK
+    command to the CST input file.
+
+    This version of CST will add that command automatically unless
+    explicitly told otherwise. The way to disable this behavior is to
+    add the following to the CST input file:
+        [Init]
+             Engine = CAAM
+             Features = RNG
+
+    This was added in CST 2.3.1, fixed in 2.3.2
+
+2.4 Changed CST input file handling
+    Previous versions of CST got the CSF input file on standard
+    input. This has changed. Now the input filename is supplied as a
+    command line argument.
+
+    Example:
+       cst --output csf.bin --input input.csf
+
+    This was added in CST 2.3.2
+
+2.5 Added unlock command for Manufacturing Protection
+    The new unlock command will cause HAB to keep the manufacturing
+    protection key in internal CAAM memory after boot.
+
+    This was added in CST 2.3.2
+
+
+3 KNOWN ISSUES
+
+No known issues.
+
