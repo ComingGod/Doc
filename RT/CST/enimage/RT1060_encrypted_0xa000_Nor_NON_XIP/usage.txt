@@ -1,4 +1,0 @@
-1 . generate_image_ivt.bat 0x8000 0x1000 0x2000 0xa000 led_demo_nonxip_0xa000_evb.bin
-    write the keyblob address to csf file
-2 . using flahloader to generate key blob
-3 . copy keyblob.bin to this folder and click generate_csf_dek.bat
