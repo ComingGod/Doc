@@ -13,52 +13,48 @@ Vgen运行后会生成如下文件，regression中用到的二级，三级group�
 
   **arg** **文件**：<block_dir>/vectors/<vector>/stimulus/arg/<test_name>.arg。
 
-  **pre_gen** **脚本**：<plans_path>/<target>/pre_gen_scripts/ 或与计划同级的 pre_gen_scripts/
+  **pre_gen** **脚本**：<plans_path>/<target>/pre_gen_scripts/ 或与计划同级的 pre_gen_scripts/ 
 
-### Vrun执行test
+
+### Vrun执行test 
+
 
 #### 执行vrun 命令后，获取顶层vsif文件
 
 /home/imxrt2660_ve4/nxa28190/V_SS_RT2660_SOC_TB_1.56/testbench/blocks/soc_tb/tool_data/vmanager/setups/soc/vsif/rtl.vsif
 
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)
-
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg)
+![[Pasted image 20260113134419.png]]
+![[Pasted image 20260113134428.png]]
 
 #### Vsif用到的第二级group
 
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg)
-
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg)
+![[Pasted image 20260113134450.png]]
+![[Pasted image 20260113134456.png]]
 
 Top_group 连接到文件夹vplanner/vmanager/top_group
 
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image010.jpg)
-
-![A screenshot of a computer
-AI-generated content may be incorrect.](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image012.jpg)
+![[Pasted image 20260113134508.png]]
+![[Pasted image 20260113134514.png]]
 
 #### Visf用到的第三级group
 
 Vplanner/vmanager/group
 
 存放test case
-
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image014.jpg)
-
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image016.jpg)
+![[Pasted image 20260113134525.png]]
+![[Pasted image 20260113134531.png]]
 
 如果vgen使用了多个vplan。则生成的二级，三级group文件中会分别有多个group 对应到不同的test plan。 不同的TC 配置，会有不同的三级group文件产生
 
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image018.jpg)
+![[Pasted image 20260113134540.png]]
 
 Rtl default group：
 
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image020.jpg)
+![[Pasted image 20260113134548.png]]
 
 Rtl_xspi group
 
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image022.jpg)
+![[Pasted image 20260113134556.png]]
 
 #### Command——执行VSIF， 不启动GUI：
 
@@ -167,7 +163,7 @@ vrun -verbose显示log
 
 红色框框内是显示的调用vmanager的命令行
 
-![](file:///C:/Users/nxa28190/AppData/Local/Temp/msohtmlclip1/01/clip_image024.jpg)
+![[Pasted image 20260113134614.png]]
 
 ## ROM RTL
 
