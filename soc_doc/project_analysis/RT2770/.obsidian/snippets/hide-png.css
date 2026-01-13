@@ -1,0 +1,5 @@
+
+/* 隐藏左侧文件浏览器中的 PNG 文件 */
+.nav-file-title[data-path$=".png"] {
+    display: none !important;
+}

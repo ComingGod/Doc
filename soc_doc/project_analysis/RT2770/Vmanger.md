@@ -23,38 +23,38 @@ Vgen运行后会生成如下文件，regression中用到的二级，三级group�
 
 /home/imxrt2660_ve4/nxa28190/V_SS_RT2660_SOC_TB_1.56/testbench/blocks/soc_tb/tool_data/vmanager/setups/soc/vsif/rtl.vsif
 
-![[Pasted image 20260113134419.png]]
-![[Pasted image 20260113134428.png]]
+![[IMG-20260113145424486.png]]
+![[IMG-20260113145424544.png]]
 
 #### Vsif用到的第二级group
 
-![[Pasted image 20260113134450.png]]
-![[Pasted image 20260113134456.png]]
+![[IMG-20260113145424622.png]]
+![[IMG-20260113145502739.png]]
 
 Top_group 连接到文件夹vplanner/vmanager/top_group
 
-![[Pasted image 20260113134508.png]]
-![[Pasted image 20260113134514.png]]
+![[IMG-20260113145519765.png]]
+![[IMG-20260113145537402.png]]
 
 #### Visf用到的第三级group
 
 Vplanner/vmanager/group
 
 存放test case
-![[Pasted image 20260113134525.png]]
-![[Pasted image 20260113134531.png]]
+![[IMG-20260113145601927.png]]
+![[IMG-20260113145611190.png]]
 
 如果vgen使用了多个vplan。则生成的二级，三级group文件中会分别有多个group 对应到不同的test plan。 不同的TC 配置，会有不同的三级group文件产生
 
-![[Pasted image 20260113134540.png]]
+![[IMG-20260113145636105.png]]
 
 Rtl default group：
 
-![[Pasted image 20260113134548.png]]
+![[IMG-20260113145657032.png]]
 
 Rtl_xspi group
 
-![[Pasted image 20260113134556.png]]
+![[IMG-20260113145726405.png]]
 
 #### Command——执行VSIF， 不启动GUI：
 
@@ -163,7 +163,7 @@ vrun -verbose显示log
 
 红色框框内是显示的调用vmanager的命令行
 
-![[Pasted image 20260113134614.png]]
+![[IMG-20260113145839285.png]]
 
 ## ROM RTL
 
