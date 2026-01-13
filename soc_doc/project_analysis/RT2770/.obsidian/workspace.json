@@ -69,7 +69,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -199,33 +199,39 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
     }
   },
   "active": "1f54ea9cbbcbdf38",
   "lastOpenFiles": [
+    "attachments/IMG-20260113155406108.png",
+    "Vmanger.md",
+    "FCCU.md",
+    "attachments/desktop.ini",
+    "attachments/FCCU.png",
+    "attachments",
+    "asserts/images/desktop.ini",
+    "asserts/desktop.ini",
+    "asserts/images/FCCU.png",
+    "asserts/images",
+    "asserts",
+    "attachments/IMG-20260113154417746.png",
     "IMG-20260113153942622.png",
     "MU.md",
-    "Vmanger.md",
     "IMG-20260113145839285.png",
     "IMG-20260113145726405.png",
     "IMG-20260113145657032.png",
     "IMG-20260113145636105.png",
     "IMG-20260113145611190.png",
     "IMG-20260113145601927.png",
-    "IMG-20260113145537402.png",
-    "IMG-20260113145519765.png",
-    "IMG-20260113145502739.png",
-    "IMG-20260113145424622.png",
     "Vmanger/desktop.ini",
     "Vmanger",
-    "FCCU.md",
     "Untitled.canvas",
     "Untitled.base",
     "desktop.ini",
